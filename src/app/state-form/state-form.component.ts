@@ -43,7 +43,8 @@
       this.formGroup = this.fb.group({
         name: [''],
         age: [''],
-        email: ['',[Validators.required,Validators.email]],
+        gender: [''],
+        isSubscribed:[true as boolean]
       });
 
       this.trackFormChanges();

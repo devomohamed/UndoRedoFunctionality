@@ -14,10 +14,15 @@
       <input id="age" pInputText type="number" formControlName="age" placeholder="Enter Age"class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
     </div>
 
-    <!-- Email Field -->
+    <!-- Gender Field -->
     <div class="field col-12 md:col-4">
-      <label for="email">Email</label>
-      <input id="email" pInputText type="email" formControlName="email" placeholder="Enter Email"class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+      <label for="gender">Gender</label>
+      <p-dropdown [options]="genderOptions" formControlName="gender" placeholder="Select Gender" class="w-full"></p-dropdown>
+    </div>
+    <!-- Subscribe Field -->
+    <div class="field-checkbox col-12 md:col-4">
+      <p-checkbox [binary]="true" formControlName="isSubscribed" inputId="subscribe"></p-checkbox>
+      <label for="subscribe">Subscribe</label>
     </div>
 
 
