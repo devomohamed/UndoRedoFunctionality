@@ -19,15 +19,15 @@
       <label for="gender">Gender</label>
       <p-dropdown [options]="genderOptions" formControlName="gender" placeholder="Select Gender" class="w-full"></p-dropdown>
     </div>
+    
     <!-- Subscribe Field -->
     <div class="field-checkbox col-12 md:col-4">
       <p-checkbox [binary]="true" formControlName="isSubscribed" inputId="subscribe"></p-checkbox>
       <label for="subscribe">Subscribe</label>
     </div>
 
-
     <!-- Submit Button -->
-    <div class="field col-12 md:col-4">
+    <div class="field col-12">
       <button pButton type="submit" label="Submit" [disabled]="formGroup.invalid"  style="width:auto;" class="button-sm"></button>
     </div>
 
