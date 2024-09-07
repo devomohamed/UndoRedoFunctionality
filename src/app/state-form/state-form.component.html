@@ -1,0 +1,38 @@
+<p-card>
+  <h2>Form Editor</h2>
+
+  <form [formGroup]="formGroup" class="formgrid grid">
+    <!-- Name Field -->
+    <div class="field col-12 md:col-4">
+      <label for="name">Name</label>
+      <input id="name" pInputText formControlName="name" placeholder="Enter Name"class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    </div>
+
+    <!-- Age Field -->
+    <div class="field col-12 md:col-4">
+      <label for="age">Age</label>
+      <input id="age" pInputText type="number" formControlName="age" placeholder="Enter Age"class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    </div>
+
+    <!-- Email Field -->
+    <div class="field col-12 md:col-4">
+      <label for="email">Email</label>
+      <input id="email" pInputText type="email" formControlName="email" placeholder="Enter Email"class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" />
+    </div>
+
+
+    <!-- Submit Button -->
+    <div class="field col-12 md:col-4">
+      <button pButton type="submit" label="Submit" [disabled]="formGroup.invalid"  style="width:auto;" class="button-sm"></button>
+    </div>
+
+    <!-- Undo and Redo Buttons-->
+    <div class="col-12 md:col-4">
+      <button pButton type="button" label="Undo" icon="pi pi-undo" (click)="undo()" class="button-sm"
+        [disabled]="undoStack.length === 0" style="width:auto;"></button>
+      <button pButton type="button" label="Redo" icon="pi pi-redo" class="button-sm ml-2" (click)="redo()"
+        [disabled]="redoStack.length === 0" style="width:auto;"></button>
+    </div>
+  </form>
+</p-card>
+<p-toast />
